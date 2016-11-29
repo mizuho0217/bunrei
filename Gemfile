@@ -52,3 +52,5 @@ gem 'paperclip'
 # 画像アップ関係
 gem 'kaminari'
 # ページネーション関係
+gem 'twitter-bootstrap-rails'
+gem 'bootstrap-material-design', '0.1.4'
