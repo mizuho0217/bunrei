@@ -96,3 +96,67 @@ Completed 200 OK in 602ms (Views: 584.0ms | ActiveRecord: 5.7ms)
 
 
 Started GET "/assets/scaffolds.self-c7f0b739bc7026019d5bb7dca1160a5fc184300f4c837dce170bbad127fb6f38.css?body=1" for ::1 at 2016-12-01 17:25:24 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateExamples (20161201092525)
+  [1m[35m (22.8ms)[0m  CREATE TABLE `examples` (`id` int(11) auto_increment PRIMARY KEY, `title` varchar(255), `user_id` int(11), `text` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161201092525')
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'bunrei_development'
+  AND fk.table_name = 'examples'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `examples`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'bunrei_development'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateIines (20161201093347)
+  [1m[35m (19.2ms)[0m  CREATE TABLE `iines` (`id` int(11) auto_increment PRIMARY KEY, `user_id` int(11), `example_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20161201093347')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'bunrei_development'
+  AND fk.table_name = 'examples'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `examples`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'bunrei_development'
+  AND fk.table_name = 'iines'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `iines`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'bunrei_development'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
