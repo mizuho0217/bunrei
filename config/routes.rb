@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tags
   resources :iines
   resources :examples
   resources :users, only: [:show, :edit, :update]
