@@ -56,7 +56,3 @@ gem 'twitter-bootstrap-rails'
 gem 'bootstrap-material-design', '0.1.4'
 gem 'therubyracer'
 gem 'acts-as-taggable-on', '~> 3.4'
-# FacebookとTwitter認証関係
-gem 'omniauth'
-gem 'omniauth-facebook'
-gem 'omniauth-twitter'
